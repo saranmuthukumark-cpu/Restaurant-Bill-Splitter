@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Restaurant-Bill-Splitter</title>
   </head>
-  <body class="bg-gradient-to-br from-orange-100 via-amber-100 to-orange-100">
+  <body class="bg-gradient-to-br from-orange-100 via-amber-100 to-orange-100 p-5 ">
     <main>
       <!-- header  -->
       <div class="text-center mt-10">
@@ -17,7 +17,7 @@
       </div>
       <!-- hero section -->
       <div
-        class="max-w-2xl mx-auto border p-5 space-y-10 rounded-lg shadow shadow-gray-600 border-gray-500">
+        class="max-w-2xl w-full  mx-auto border p-5 space-y-10 rounded-lg shadow shadow-gray-600 border-gray-500">
         <!-- bill -->
         <div>
           <label for="" class="font-semibold">Bill:</label>
@@ -88,7 +88,7 @@
 
         <hr />
         <!-- result section -->
-        <div class="flex justify-around items-center">
+        <div class="flex justify-around items-center flex-wrap  max-sm:flex-col ">
           <p class="font-semibold">
             Subtotal:
             <span id="sub-total" class="font-bold text-orange-600">₹0.00</span>

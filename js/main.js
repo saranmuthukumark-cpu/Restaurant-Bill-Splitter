@@ -1,12 +1,12 @@
 
-
+// update tax
 function updateTax(){
 
 const tax = document.getElementById('tax').value;
 document.getElementById('tax-label').textContent= tax +"%";
 calculate();
 }
-
+// update tips
 function updateTip(){
 const tip =  document.getElementById('tip').value;
 document.getElementById('tip-label').textContent = tip + "%";
@@ -14,7 +14,7 @@ calculate();
 }
 
 
-// 
+// increase people
 
 function increasePeople(){
 
@@ -26,7 +26,7 @@ calculate();
 }
 
 
-//  
+// decrease people
 
 function decreasePeople(){
 const peopleInput = document.getElementById('people');
@@ -37,7 +37,7 @@ calculate();
 }
 
 
-// 
+// reset 
 
 function resetCalculate(){
 
@@ -52,7 +52,7 @@ calculate();
 }
 
 
-//  
+// calculate function
 
 
 function calculate(){
