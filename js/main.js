@@ -1,5 +1,7 @@
 
-// update tax
+document.addEventListener("DOMContentLoaded",()=>{
+
+//update tax
 function updateTax(){
 
 const tax = document.getElementById('tax').value;
@@ -86,6 +88,7 @@ document.getElementById('perPerson').textContent = `₹${perPerson.toFixed(2)}`;
 calculate();
 
 
+});
 
 
 
