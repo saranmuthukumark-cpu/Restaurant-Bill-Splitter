@@ -1,13 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Restaurant-Bill-Splitter</title>
+  </head>
+  <body class="bg-gradient-to-br from-orange-100 via-amber-100 to-orange-100">
+    <main>
+      <!-- header  -->
+      <div class="text-center mt-10">
+        <h1 class="text-4xl font-bold ">Bill Splitter 🍽️</h1>
+        <p class="m-3 font-medium text-lg text-gray-900 ">
+          To split the bill fairly among friends
+        </p>
+      </div>
+      <!-- hero section -->
+      <div
+        class="max-w-2xl mx-auto border p-5 space-y-10 rounded-lg shadow shadow-gray-600">
+        <!-- bill -->
+        <div>
+          <label for="" class="font-semibold">Bill:</label>
+          <input
+            type="number"
+            id="bill"
+            class="w-full  border rounded-lg text-xl p-2 mt-3 outline-none"
+            placeholder="Enter your bill amount"
+            oninput="calculate()" />
+        </div>
 
-    <title>Bill-Splitter</title>
-</head>
-<body>
-     
-</body>
+        <!-- no of people -->
+        <label for="" class="font-semibold">Number of People:</label>
+        <div class="flex gap-5 mt-3">
+          <button
+            onclick="decreasePeople()"
+            class="p-3 border rounded-lg  bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out hover:bg-orange-600/80  active:scale-96 w-12 h-12 cursor-pointer">
+            -
+          </button>
+          <input
+            type="number"
+            id="people"
+            class="w-full border text-center text-2xl rounded-lg outline-none"
+            value="2" />
+          <button
+            onclick="increasePeople()"
+            class="p-3 border rounded-lg bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out w-12 h-12 hover:bg-orange-600/80 active:scale-96 cursor-pointer">
+            +
+          </button>
+        </div>
+        <!-- tax section -->
+        <div>
+          <div class="flex justify-between">
+            <label for="" class="font-semibold">Tax:</label
+            ><span class="font-bold text-orange-600" id="tax-label">8%</span>
+          </div>
+          <div>
+            <input
+              type="range"
+              id="tax"
+              value="8"
+              min="0"
+              max="20"
+              class="w-full accent-orange-600"
+              oninput="updateTax()" />
+          </div>
+        </div>
+
+        <!-- tips section -->
+
+        <div>
+          <div class="flex justify-between">
+            <label for="" class="font-semibold">Tips:</label
+            ><span class="font-bold text-orange-600" id="tip-label">10%</span>
+          </div>
+          <div>
+            <input
+              type="range"
+              id="tip"
+              value="10"
+              min="0"
+              max="20"
+              class="w-full accent-orange-600"
+              oninput="updateTip()" />
+          </div>
+        </div>
+
+        <hr />
+        <!-- result section -->
+        <div class="flex justify-around items-center">
+          <p class="font-semibold">Subtotal: <span id="sub-total" class="font-bold text-orange-600">₹0.00</span></p>
+          <p class="font-semibold">Tax: <span id="taxAmount" class="font-bold text-orange-600">₹0.00</span></p>
+          <p class="font-semibold">Tips: <span id="tipAmount" class="font-bold text-orange-600 ">₹0.00</span></p>
+          <p class="font-bold text-xl">Total: <span id="total" class="font-bold text-orange-600 ">₹0.00</span></p>
+        </div>
+      </div>
+
+      <!-- each person  -->
+      <div
+        class="max-w-2xl mx-auto mt-10 space-y-3 text-center my-5 p-5 rounded-lg bg-orange-200 shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out border   ">
+        <p class="text-2xl font-semibold ">Each Person Pays</p>
+        <p class="font-bold text-2xl" id="perPerson">₹0.00</p>
+        <p>
+          Splitted between <span class="font-bold text-xl" id="count ">2</span> People
+        </p>
+        <button
+          onclick="resetCalculate()"
+          class="border  bg-orange-600 text-white rounded-lg px-5 py-2 hover:bg-orange-500 transition-all duration-300 ease-in-out active:97">
+          🔄️ Reset
+        </button>
+      </div>s
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
