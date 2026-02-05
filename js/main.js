@@ -72,12 +72,12 @@ const total = bill + taxAmount + tipAmount;
 
 const perPerson = total/people;
 
-document.getElementById('count').textContent =people;
+document.getElementById('count').textContent = people;
 document.getElementById('taxAmount').textContent = `₹${taxAmount.toFixed(2)}`;
 document.getElementById('tipAmount').textContent = `₹${tipAmount.toFixed(2)}`;
 document.getElementById('sub-total').textContent = `₹${bill.toFixed(2)}`;
 document.getElementById('total').textContent = `₹${total.toFixed(2)}`;
-document.getElementById('perPerson').textContent = `₹   ${perPerson.toFixed(2)}`;
+document.getElementById('perPerson').textContent = `₹${perPerson.toFixed(2)}`;
 
 
 

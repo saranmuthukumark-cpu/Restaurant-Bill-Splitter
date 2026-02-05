@@ -24,7 +24,7 @@
           <input
             type="number"
             id="bill"
-            class="w-full border rounded-lg text-xl p-2 mt-3 outline-none bg-orange-50 border-gray-500"
+            class="w-full border rounded-lg text-xl py-2 px-3 mt-3 outline-none bg-orange-50 border-gray-500"
             placeholder="Enter your bill amount"
             oninput="calculate()" />
         </div>
@@ -34,17 +34,18 @@
         <div class="flex gap-5 mt-3">
           <button
             onclick="decreasePeople()"
-            class="p-3 border rounded-lg bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out hover:bg-orange-600/80 active:scale-96 w-12 h-12 cursor-pointer">
+            class="p-4 px-5 flex items-center justify-center mx-auto border rounded-full bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out hover:bg-orange-600/80 active:scale-96 w-12 h-12 cursor-pointer">
             -
           </button>
           <input
             type="number"
             id="people"
             class="w-full border text-center text-2xl rounded-lg outline-none bg-orange-50 border-gray-500"
-            value="2" />
+            value="2"
+            oninput="calculate()" />
           <button
             onclick="increasePeople()"
-            class="p-3 border rounded-lg bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out w-12 h-12 hover:bg-orange-600/80 active:scale-96 cursor-pointer">
+            class="p-4 px-5 flex items-center justify-center mx-auto border rounded-full bg-orange-600 text-white font-bold transition-all duration-300 ease-in-out w-12 h-12 hover:bg-orange-600/80 active:scale-96 cursor-pointer">
             +
           </button>
         </div>
@@ -111,10 +112,10 @@
       <div
         class="max-w-2xl mx-auto mt-10 space-y-3 text-center my-5 p-5 rounded-lg border-gray-500 bg-orange-200 shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out border">
         <p class="text-2xl font-semibold">Each Person Pays</p>
-        <p class="font-bold text-2xl" id="perPerson">₹0.00</p>
+        <p class="font-bold text-2xl text-orange-700" id="perPerson">₹0.00</p>
         <p>
           Splitted between
-          <span class="font-bold text-xl" id="count ">2</span> People
+          <span class="font-bold text-xl" id="count">2</span> People
         </p>
         <button
           onclick="resetCalculate()"
